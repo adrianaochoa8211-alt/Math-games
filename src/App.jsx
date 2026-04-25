@@ -68,7 +68,7 @@ export default function App() {
         {/* Status Footer */}
         <footer className="mt-32 pt-10 border-t border-arcade-border flex flex-col md:flex-row items-center justify-between gap-6 font-mono text-[10px] text-arcade-muted uppercase tracking-[0.2em]">
           <div>
-            LOADED {gamesData.length} GAMES FROM DATABASE.JSON
+            LOADED {gamesData.length} GAMES FROM GAMES.JSON
           </div>
           <div className="flex items-center gap-6">
             <span>CPU: 12%</span>

@@ -1,58 +1,10 @@
 [
   {
-    "id": "slope-v2",
-    "title": "Slope",
-    "description": "The classic Slope game. Roll down the slope as fast as you can.",
-    "iframeUrl": "https://ubg98.github.io/Slope/",
-    "category": "Action",
-    "thumbnail": "https://img.poki.com/392/689/824/5b2a0c6a8a.jpg"
-  },
-  {
-    "id": "2048",
-    "title": "2048",
-    "description": "Join the numbers and get to the 2048 tile!",
-    "iframeUrl": "https://play2048.co/",
-    "category": "Puzzle",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/1/18/2048_logo.svg"
-  },
-  {
-    "id": "flappy-bird",
-    "title": "Flappy Bird",
-    "description": "Flap your wings and fly through pipes.",
-    "iframeUrl": "https://flappybird.io/",
+    "id": "geometry-dash-lite",
+    "title": "Geometry Dash Lite",
+    "description": "Jump and fly your way through danger in this rhythm-based action platformer! Push your skills to the limit as you jump, fly and flip your way through dangerous passages and spiky obstacles.",
+    "iframeUrl": "https://geometry-dash-lite.1games.io/",
     "category": "Arcade",
-    "thumbnail": "https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png"
-  },
-  {
-    "id": "snake",
-    "title": "Google Snake",
-    "description": "The classic snake game. Eat apples, grow longer.",
-    "iframeUrl": "https://www.google.com/logos/2010/pacman10-i.html",
-    "category": "Arcade",
-    "thumbnail": "https://www.google.com/logos/2010/pacman10-i.html"
-  },
-  {
-    "id": "tetris",
-    "title": "Tetris",
-    "description": "Stack blocks and clear lines.",
-    "iframeUrl": "https://tetris.com/play-tetris",
-    "category": "Puzzle",
-    "thumbnail": "https://tetris.com/img/tetris-logo.png"
-  },
-  {
-    "id": "hextris",
-    "title": "Hextris",
-    "description": "Fast-paced hexagonal puzzle game.",
-    "iframeUrl": "https://hextris.io/",
-    "category": "Puzzle",
-    "thumbnail": "https://hextris.io/images/logo.png"
-  },
-  {
-    "id": "slope",
-    "title": "Slope",
-    "description": "Roll down the slope as fast as you can.",
-    "iframeUrl": "https://v6p9d9t4.ssl.hwcdn.net/html/1454652/index.html",
-    "category": "Action",
-    "thumbnail": "https://img.poki.com/392/689/824/5b2a0c6a8a.jpg"
+    "thumbnail": "https://i.postimg.cc/HJwg2PJD/Capture7.png"
   }
 ]

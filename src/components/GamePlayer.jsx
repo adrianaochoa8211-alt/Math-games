@@ -86,7 +86,15 @@ export default function GamePlayer({ game, onClose }) {
             <div className="flex items-center gap-4">
               <span>Category: <span className="text-white font-bold">{game.category}</span></span>
               <span className="hidden md:inline">•</span>
-              <span className="hidden md:inline">Embed from: {new URL(game.iframeUrl || game.url).hostname}</span>
+              <span className="hidden md:inline">
+                Embed source: {(() => {
+                  try {
+                    return new URL(game.iframeUrl || game.url).hostname;
+                  } catch (e) {
+                    return 'Secure Portal';
+                  }
+                })()}
+              </span>
             </div>
             <div className="flex items-center gap-1">
               <div className="w-1.5 h-1.5 bg-arcade-accent rounded-full animate-pulse" />

@@ -37,7 +37,7 @@ const GameCard = ({ game, onClick }) => {
       
       <div className="p-6 relative">
         <h3 className="font-bold text-xl mb-2 group-hover:text-arcade-accent-light transition-colors leading-tight">
-          {game.title}
+          {game.title || game.name}
         </h3>
         <p className="text-arcade-muted text-sm line-clamp-2 leading-relaxed opacity-80">
           {game.description}

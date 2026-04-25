@@ -1,5 +1,13 @@
 [
   {
+    "id": "slope-v2",
+    "title": "Slope",
+    "description": "The classic Slope game. Roll down the slope as fast as you can.",
+    "iframeUrl": "https://ubg98.github.io/Slope/",
+    "category": "Action",
+    "thumbnail": "https://img.poki.com/392/689/824/5b2a0c6a8a.jpg"
+  },
+  {
     "id": "2048",
     "title": "2048",
     "description": "Join the numbers and get to the 2048 tile!",

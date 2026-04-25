@@ -38,7 +38,7 @@ export default function GamePlayer({ game, onClose }) {
               </button>
               <div>
                 <h2 className="font-bold text-xl leading-none flex items-center gap-3">
-                  {game.title}
+                  {game.title || game.name}
                   <span className="text-[10px] bg-arcade-accent text-white px-2 py-0.5 rounded-full uppercase font-black tracking-widest animate-pulse">
                     Live
                   </span>
@@ -74,10 +74,10 @@ export default function GamePlayer({ game, onClose }) {
             <iframe
               key={key}
               ref={iframeRef}
-              src={game.iframeUrl}
+              src={game.iframeUrl || game.url}
               className="w-full h-full border-none"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-              title={game.title}
+              title={game.title || game.name}
             />
           </div>
 
@@ -86,7 +86,7 @@ export default function GamePlayer({ game, onClose }) {
             <div className="flex items-center gap-4">
               <span>Category: <span className="text-white font-bold">{game.category}</span></span>
               <span className="hidden md:inline">•</span>
-              <span className="hidden md:inline">Embed from: {new URL(game.iframeUrl).hostname}</span>
+              <span className="hidden md:inline">Embed from: {new URL(game.iframeUrl || game.url).hostname}</span>
             </div>
             <div className="flex items-center gap-1">
               <div className="w-1.5 h-1.5 bg-arcade-accent rounded-full animate-pulse" />

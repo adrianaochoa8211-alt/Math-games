@@ -1,10 +1,10 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import gamesData from './games.json';
-import Header from './components/Header';
-import CategoryFilter from './components/CategoryFilter';
-import GameCard from './components/GameCard';
-import GamePlayer from './components/GamePlayer';
+import Header from './components/Header.jsx';
+import CategoryFilter from './components/CategoryFilter.jsx';
+import GameCard from './components/GameCard.jsx';
+import GamePlayer from './components/GamePlayer.jsx';
 
 const CATEGORIES = ['All', 'Action', 'Puzzle', 'Sports', 'Arcade', 'Strategy'];
 

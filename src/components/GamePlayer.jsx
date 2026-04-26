@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Maximize2, RotateCcw } from 'lucide-react';
 import { useState, useRef } from 'react';
+import ChessGame from './ChessGame';
 
 export default function GamePlayer({ game, onClose }) {
   const [key, setKey] = useState(0);
@@ -17,6 +18,8 @@ export default function GamePlayer({ game, onClose }) {
       }
     }
   };
+
+  const isNativeGame = game?.id === 'chess';
 
   return (
     <AnimatePresence>
@@ -44,41 +47,52 @@ export default function GamePlayer({ game, onClose }) {
                   </span>
                 </h2>
                 <p className="text-[11px] text-arcade-muted uppercase font-bold tracking-widest mt-1.5 opacity-60">
-                  {game.category} • Fullscreen Optimized
+                  {game.category} • {isNativeGame ? 'Native Experience' : 'Fullscreen Optimized'}
                 </p>
               </div>
             </div>
 
             <div className="flex items-center gap-3">
-              <button 
-                onClick={resetGame}
-                className="flex items-center gap-2 px-4 py-2 bg-arcade-bg border border-arcade-border hover:bg-white/5 rounded-xl text-xs font-bold transition-all text-arcade-muted hover:text-white shadow-lg"
-                title="Reset Game"
-              >
-                <RotateCcw size={14} />
-                <span className="hidden md:inline">RELOAD</span>
-              </button>
-              <button 
-                onClick={toggleFullscreen}
-                className="flex items-center gap-2 px-6 py-2.5 bg-arcade-accent text-white rounded-xl text-xs font-black tracking-widest hover:bg-arcade-accent/90 transition-all shadow-xl shadow-arcade-accent/20"
-              >
-                <Maximize2 size={14} />
-                <span className="hidden md:inline uppercase">FULLSCREEN</span>
-              </button>
+              {!isNativeGame && (
+                <>
+                  <button 
+                    onClick={resetGame}
+                    className="flex items-center gap-2 px-4 py-2 bg-arcade-bg border border-arcade-border hover:bg-white/5 rounded-xl text-xs font-bold transition-all text-arcade-muted hover:text-white shadow-lg"
+                    title="Reset Game"
+                  >
+                    <RotateCcw size={14} />
+                    <span className="hidden md:inline">RELOAD</span>
+                  </button>
+                  <button 
+                    onClick={toggleFullscreen}
+                    className="flex items-center gap-2 px-6 py-2.5 bg-arcade-accent text-white rounded-xl text-xs font-black tracking-widest hover:bg-arcade-accent/90 transition-all shadow-xl shadow-arcade-accent/20"
+                  >
+                    <Maximize2 size={14} />
+                    <span className="hidden md:inline uppercase">FULLSCREEN</span>
+                  </button>
+                </>
+              )}
             </div>
           </div>
 
-          {/* Iframe Viewport */}
+          {/* Game Viewport */}
           <div className="flex-1 relative bg-black overflow-hidden arcade-grid">
             <div className="scanline" />
-            <iframe
-              key={key}
-              ref={iframeRef}
-              src={game.iframeUrl || game.url}
-              className="w-full h-full border-none"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-              title={game.title || game.name}
-            />
+            
+            {isNativeGame ? (
+              <div key={key} className="w-full h-full overflow-auto">
+                {game.id === 'chess' && <ChessGame />}
+              </div>
+            ) : (
+              <iframe
+                key={key}
+                ref={iframeRef}
+                src={game.iframeUrl || game.url}
+                className="w-full h-full border-none"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                title={game.title || game.name}
+              />
+            )}
           </div>
 
           {/* Footer Info */}
@@ -87,13 +101,13 @@ export default function GamePlayer({ game, onClose }) {
               <span>Category: <span className="text-white font-bold">{game.category}</span></span>
               <span className="hidden md:inline">•</span>
               <span className="hidden md:inline">
-                Embed source: {(() => {
+                {isNativeGame ? 'Built-in Module' : `Embed source: ${(() => {
                   try {
                     return new URL(game.iframeUrl || game.url).hostname;
                   } catch (e) {
                     return 'Secure Portal';
                   }
-                })()}
+                })()}`}
               </span>
             </div>
             <div className="flex items-center gap-1">

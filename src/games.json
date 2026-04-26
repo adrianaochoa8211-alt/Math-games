@@ -6,5 +6,13 @@
     "iframeUrl": "https://geometry-dash-lite.1games.io/",
     "category": "Arcade",
     "thumbnail": "https://i.postimg.cc/HJwg2PJD/Capture7.png"
+  },
+  {
+    "id": "chess",
+    "title": "Chess AI",
+    "description": "Master the ultimate game of strategy. Challenge your mind with our custom Chess engine, featuring selectable AI bot difficulty (Easy, Medium, and Hard).",
+    "iframeUrl": "",
+    "category": "Strategy",
+    "thumbnail": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=800"
   }
 ]

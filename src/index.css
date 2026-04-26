@@ -5,27 +5,22 @@
   --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --color-arcade-bg: #09090b; /* zinc-950 */
-  --color-arcade-surface: #18181b; /* zinc-900 */
-  --color-arcade-border: #27272a; /* zinc-800 */
-  --color-arcade-accent: #4f46e5; /* indigo-600 */
-  --color-arcade-accent-light: #818cf8; /* indigo-400 */
-  --color-arcade-muted: #71717a; /* zinc-500 */
-  --color-arcade-text: #f4f4f5; /* zinc-100 */
+  --color-arcade-bg: #0a0a0c;
+  --color-arcade-surface: #121217;
+  --color-arcade-border: #23232b;
+  --color-arcade-accent: #3b82f6;
+  --color-arcade-muted: #64748b;
+  --color-arcade-text: #f8fafc;
+  
+  --color-snake-body: #22c55e;
+  --color-snake-head: #4ade80;
+  --color-snake-food: #ef4444;
 }
 
 @layer base {
   body {
-    @apply bg-arcade-bg text-arcade-text font-sans antialiased selection:bg-arcade-accent selection:text-white;
+    @apply bg-arcade-bg text-arcade-text font-sans antialiased;
   }
-}
-
-.bento-card {
-  @apply bg-arcade-surface border border-arcade-border rounded-3xl transition-all duration-300;
-}
-
-.bento-card:hover {
-  @apply border-arcade-accent/30 shadow-[0_0_20px_rgba(79,70,229,0.1)];
 }
 
 .scanline {

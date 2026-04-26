@@ -6,7 +6,7 @@ import CategoryFilter from './components/CategoryFilter.jsx';
 import GameCard from './components/GameCard.jsx';
 import GamePlayer from './components/GamePlayer.jsx';
 
-const CATEGORIES = ['All', 'Action', 'Puzzle', 'Sports', 'Arcade', 'Strategy'];
+const CATEGORIES = ['All', 'Action', 'Puzzle', 'Sports', 'Arcade', 'Strategy', 'Classic'];
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');

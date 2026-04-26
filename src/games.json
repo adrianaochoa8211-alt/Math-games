@@ -8,11 +8,11 @@
     "thumbnail": "https://i.postimg.cc/HJwg2PJD/Capture7.png"
   },
   {
-    "id": "chess",
-    "title": "Chess AI",
-    "description": "Master the ultimate game of strategy. Challenge your mind with our custom Chess engine, featuring selectable AI bot difficulty (Easy, Medium, and Hard).",
+    "id": "snake",
+    "title": "Neon Snake",
+    "description": "A rapid-paced classic re-imagined with neon visuals. Navigate the grid, collect energy cores, and grow your digital serpent without hitting the mainframe walls.",
     "iframeUrl": "",
-    "category": "Strategy",
-    "thumbnail": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&q=80&w=800"
+    "category": "Classic",
+    "thumbnail": "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?auto=format&fit=crop&q=80&w=800"
   }
 ]

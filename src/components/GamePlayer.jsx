@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Maximize2, RotateCcw } from 'lucide-react';
 import { useState, useRef } from 'react';
-import ChessGame from './ChessGame';
+import SnakeGame from './SnakeGame';
 
 export default function GamePlayer({ game, onClose }) {
   const [key, setKey] = useState(0);
@@ -19,7 +19,7 @@ export default function GamePlayer({ game, onClose }) {
     }
   };
 
-  const isNativeGame = game?.id === 'chess';
+  const isNativeGame = game?.id === 'snake';
 
   return (
     <AnimatePresence>
@@ -81,7 +81,7 @@ export default function GamePlayer({ game, onClose }) {
             
             {isNativeGame ? (
               <div key={key} className="w-full h-full overflow-auto">
-                {game.id === 'chess' && <ChessGame />}
+                {game.id === 'snake' && <SnakeGame />}
               </div>
             ) : (
               <iframe
